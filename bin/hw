@@ -3,6 +3,7 @@
 const { program } = require('commander')
 const chalk = require('chalk')
 const packageJson = require('../package.json')
+const create = require('../lib/create')
 
 // 定义命令
 program
@@ -12,6 +13,7 @@ program
   .action((project_name, options) => {
     console.log('project_name ->', project_name)
     console.log('options ->', options)
+    create(project_name, options)
   })
 
 // 定义版本
